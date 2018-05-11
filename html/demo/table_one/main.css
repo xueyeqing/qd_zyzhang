@@ -1,0 +1,19 @@
+body {
+    font-size: 14px;
+}
+
+table {
+    border: solid 1px #ccc;
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    border: solid 1px #ccc;
+    line-height: 22px;
+    height: 22px;
+}
+
+#tbheader td {
+    background: #fff;
+}

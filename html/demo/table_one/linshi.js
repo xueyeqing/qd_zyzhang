@@ -152,3 +152,68 @@ oFixedTable.prototype.buildTopLeft = function () {
         }
     }
 };  
+
+/*
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>table固定表头和左侧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <script src="./main.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+<div id="divBox1" style="margin:20px 50px;overflow:auto;height:520px;width:450px;float:left;"></div>
+<!-- <div id="divBox2" style="margin:20px 50px;overflow:auto;height:520px;width:450px;float:left;"></div> -->
+</body>
+
+</html>
+<script type="text/javascript">
+    function test(num) {
+        var box = document.getElementById('divBox' + num);
+        var strHtml = '<table id="tbTest' + num + '" cellpadding="0" cellspacing="0" style="text-align:center;width:680px;">';
+        for (var i = 0; i < 1; i++) {
+            strHtml += '<tr style="background:url(title_bg.png) repeat-x;">';
+            for (var j = 0; j < 8; j++) {
+                if (j < 8 - 1) {
+                    strHtml += '<th style="width:80px;">';
+                } else {
+                    strHtml += '<th>';
+                }
+                strHtml += '第' + (i + 1) + '行第' + (j + 1) + '列';
+                strHtml += '</th>';
+            }
+            strHtml += '</tr>';
+        }
+        for (var i = 1; i < 30; i++) {
+            strHtml += '<tr>';
+            for (var j = 0; j < 8; j++) {
+                if (j < 8 - 1) {
+                    strHtml += '<td style="width:80px;">';
+                } else {
+                    strHtml += '<td>';
+                }
+                strHtml += '第' + (i + 1) + '行第' + (j + 1) + '列';
+                strHtml += '</td>';
+            }
+            strHtml += '</tr>';
+        }
+        strHtml += '</table>';
+        box.innerHTML = strHtml;
+    }
+    test(1);
+    // test(2);
+
+    //调用固定表头类
+    var ofix1 = new oFixedTable('ofix1', document.getElementById('tbTest1'), { rows: 1, cols: 1 });
+
+    // var ofix2 = new oFixedTable('ofix2', document.getElementById('tbTest2'), { rows: 2, cols: 1 });
+
+</script>
+*/

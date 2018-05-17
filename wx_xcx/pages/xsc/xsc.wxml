@@ -1,0 +1,21 @@
+<!--pages/xsc/xsc.wxml-->
+<view class="container">
+    <scroll-view scroll-y="true" bindscrolltolower="loadMore">
+      <!--banner-->
+      <view class='swiper'>
+        <swiper indicator-dots='{{indicatorDots}}' vertical='{{vertical}}' 
+            autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+            <block wx:for-items="{{banner_url}}" wx:key="item.id">
+              <swiper-item>
+                 <block wx:if="{{item}}">
+                    <image src='{{item}}'></image>
+                  </block>
+                  <block wx:else>
+                    <image src='../images/default_pic.png' mode='aspectFill'></image>
+                  </block>
+              </swiper-item>
+            </block>  
+        </swiper>
+      </view>
+    </scroll-view>
+</view>

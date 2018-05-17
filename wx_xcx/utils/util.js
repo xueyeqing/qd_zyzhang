@@ -18,7 +18,7 @@
 //   formatTime: formatTime
 // }
 
-//获取当前位置坐标
+//获取当前位置坐标--------------------3
 function getLocation(callback) {
   wx.getLocation({
     success: function(res) {
@@ -31,7 +31,7 @@ function getLocation(callback) {
   })
 }
 
-//Reverse Geocoding 根据经纬度获取城市名称
+//Reverse Geocoding 根据经纬度获取城市名称--------------------5-2
 function getCityName(latitude, longitude, callback) {
   var apiURL = "http://api.map.baidu.com/geocoder?output=json&location=" + latitude + "," + longitude + "&key=2x0rOC7KcRqbnXqomm5kBf7YGUh7awVw";
 
@@ -43,7 +43,7 @@ function getCityName(latitude, longitude, callback) {
   })
 }
 
-//获取指定位置的天气信息
+//获取指定位置的天气信息--------------------4
 function getWeatherByLocation(latitude, longitude, callback) {
   var apiKey = "0962d559328fa22eb7d8082a8c3fb627";
   var apiURL = "https://api.darksky.net/forecast/" + apiKey + "/" + latitude + "," + longitude + "?lang=zh&units=ca";
@@ -60,7 +60,7 @@ function getWeatherByLocation(latitude, longitude, callback) {
   });
 }
 
-//解析天气数据
+//解析天气数据--------------------5-1
 function parseWeatherData(data) {
   var weather = {};
   weather["current"] = data.currently;
@@ -89,7 +89,7 @@ function formatWeekday(timestamp) {
 }
 
 
-// 加载天气数据
+// 加载天气数据--------------------2
 function requestWeatherData(cb){
   getLocation(function(success,latitude,longitude){
     //如果 GPS 信息获取不成功， 设置一个默认坐标
@@ -104,7 +104,7 @@ function requestWeatherData(cb){
   });
 }
 
-// 获取当前位置的天气
+// 获取当前位置的天气--------------------1
 function loadWeatherData(callback) {
   requestWeatherData(function (data) {
     //对原始数据做一些修整， 然后输出给前端

@@ -62,6 +62,12 @@ Page({
     wx.navigateTo({
       url: '../weather/weather',
     })
+  },
+  // 小商场demo
+  democlick:function(){
+    wx.navigateTo({
+      url: '../xsc/xsc',
+    })
   }
 
 })

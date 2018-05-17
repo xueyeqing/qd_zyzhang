@@ -1,0 +1,9 @@
+/* pages/xsc/xsc.wxss */
+/* 轮播图 */
+.swiper{
+    width:100%;
+    margin:0rpx;
+}
+.swiper image{
+    display: inline;
+}

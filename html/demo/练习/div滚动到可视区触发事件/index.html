@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <script language="javascript" src="../../js/jquery-3.2.1.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            $(window).bind("scroll", function (event) {
+                $("div").each(function () {
+                    // $(window).scrollTop()：当前滚动的地方的窗口顶端到整个页面顶端的距离
+                    // console.log($(window).scrollTop());
+                    // console.log('---',$(this).offset().top);
+                    var fold = $(window).height() + $(window).scrollTop();
+                    // console.log('+++',fold);
+                    // 元素出现在可视区域后要做的事
+                    // 获取指定元素的页面位置  
+                    if ($(this).offset().top < fold && $(this).offset().top >= $(window).scrollTop()) {
+                        //  trigger() 方法触发被选元素的指定事件类型
+                        $(this).trigger("appear");
+                    }
+                });
+            });
+            $("div").each(function () {
+                if ($(window).height() > $(this).offset().top) {
+                    $(this).html("出现在可视区域");
+                }
+                $(this).one("appear", function () {
+                    console.log('11111');
+                    $(this).html("出现在可视区域");
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>111</div>
+    <div>1111</div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div showed="N">111111111111</div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div showed="N">111111111111</div>
+</body>
+
+</html>

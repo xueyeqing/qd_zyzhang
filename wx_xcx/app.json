@@ -3,12 +3,13 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/test/test",
-    "pages/weather/weather"
+    "pages/weather/weather",
+    "pages/xsc/xsc"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#37383c",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"white"
   }
 }

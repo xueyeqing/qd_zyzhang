@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
+  <view class="userinfo main">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
@@ -12,8 +12,12 @@
     <button bindtap='clickTest'>test.wxml</button>
   </view>
 
-  <view>
+  <view class='main'>
     <button bindtap='getWeather'>getweather.wxml</button>
+  </view>
+
+  <view class='main'>
+    <button bindtap='democlick'>小商城demo</button>
   </view>
 
 </view>

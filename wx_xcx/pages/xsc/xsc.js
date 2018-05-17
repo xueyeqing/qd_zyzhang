@@ -1,6 +1,7 @@
-// pages/weather/weather.js
-
-var util = require('../../utils/util.js');
+// pages/xsc/xsc.js
+// 获取应用实例
+var app = getApp();
+var fileData = require('../../utils/data.js')
 
 Page({
 
@@ -8,20 +9,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    weather:{}
+    // banner初始化
+    banner_url:fileData.getBannerData(),
+    indicatorDots: true,
+    vertical: false,
+    autoplay: true,
+    interval: 3000,
+    duration: 1000,
+    // nav 初始化
+    navTopItems: fileData.getIndexNavData()
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    util.loadWeatherData(function(data){
-      console.log('weather.js',data);
-      that.setData({
-        weather: data
-      });
-    });
+  
   },
 
   /**

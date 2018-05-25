@@ -82,9 +82,9 @@ var allEle = $(':header[class*="headline"]');
     //滚动页面，即滚动条滚动
     $(window).scroll(function () {
         if($(this).scrollTop()>$(this).height()){
-            // $('.slide').show();
+            $('.slide').show();
         }else{
-            // $('.slide').hide();
+            $('.slide').hide();
         }
         for (var i=headLen-1; i>=0; i--) {
             if ($(this).scrollTop() >=allEle.eq(i).offset().top - allEle.eq(i).height()) {

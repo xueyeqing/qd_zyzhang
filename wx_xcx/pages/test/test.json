@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "TEST"
+  "navigationBarTitleText": "TEST",
+  "usingComponents":{
+    "my-component":"../components/components"
+  }
 }

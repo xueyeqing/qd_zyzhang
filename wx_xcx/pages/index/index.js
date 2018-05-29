@@ -57,6 +57,11 @@ Page({
       url: '../test/test',
     })
   },
+  clickComponents:function(){
+    wx.navigateTo({
+      url: '../customcomp/customcomp',
+    })
+  },
   // 获取天气
   getWeather:function(){
     wx.navigateTo({

@@ -13,6 +13,10 @@
   </view>
 
   <view class='main'>
+    <button bindtap='clickComponents'>自定义组件</button>
+  </view>
+
+  <view class='main'>
     <button bindtap='getWeather'>getweather.wxml</button>
   </view>
 

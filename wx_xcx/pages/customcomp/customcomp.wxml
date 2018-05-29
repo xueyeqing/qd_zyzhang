@@ -1,0 +1,13 @@
+<!--pages/customcomp/customcomp.wxml-->
+<view class='container'>
+  <view class='main'>
+    
+    <!-- 自定义组件 对话框 pages/components/dialog  -->
+    <dialog id='dialog' title='我是标题' content='内容部分' cancleText="取消" confirmText="确定"
+      bind:cancelEvent="_cancelEvent"  
+      bind:confirmEvent="_confirmEvent"></dialog>
+    <!--弹出对话框事件  -->
+    <button bindtap='clickDialog'>自定义对话框</button>
+
+  </view>
+</view>

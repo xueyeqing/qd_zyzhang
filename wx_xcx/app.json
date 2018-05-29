@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/test/test",
+    "pages/customcomp/customcomp",
     "pages/weather/weather",
     "pages/xsc/xsc"
   ],

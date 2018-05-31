@@ -58,3 +58,11 @@ Object.values(a1).forEach(function (value,index) {
     })
 });
 console.log(arr)
+
+
+// 排序
+var a = [1,8,7,10,5];
+var b = a.sort(function(a,b){
+    return b-a;
+});
+console.log(b)

@@ -22,7 +22,7 @@ h1,h2,h3 {font-size: 12px;margin: 0;padding: 0;}
 
 .tab-css tr.tr-css {background-color: #f5fafe;height: 30px;}
 
-.tab-css tr:nth-child(odd) td {background-color: #ECE9D8;}
+/*.tab-css tr:nth-child(odd) td {background-color: #ECE9D8;}*/
 
 .fixed {position: fixed;background: #069DD5!important;color: #fff;width: 37px;height: 30px;line-height: 30px;}
 

@@ -16,7 +16,7 @@ for(let i=0;i<qindex.length;i++){ // 循环题目
        data.push(teachers[ind]);
     }
     start = ind+1;
-    console.log(data);
+    // console.log(data);
 }
 console.log('---------------------------------------')
 /**
@@ -34,5 +34,27 @@ for (let i = 0; i < qindex.length; i++) {
         }
         index++;
     }
-    console.log(t1);
+    // console.log(t1);
 } 
+
+/**
+  * 数组合并
+  */
+let x1 = {a:[1,2,4,5],b: [12, 22, 44, 55]}
+let x2 = [...x1.a,...x1.b]
+// console.log(x2)
+
+/*
+ * 对象合并 去掉重复的
+ */
+let a1 ={_a1:[1,2,3,4,5],_a2:[11,2,33,4,5,33]};
+var arr = [];
+// Object.keys(a1).forEach(function (key) {}
+Object.values(a1).forEach(function (value,index) {
+    value.forEach(function (v) {
+        if (arr.indexOf(v) == -1) { //在字符串中首次出现的位置 
+            arr.push(v);
+        }
+    })
+});
+console.log(arr)

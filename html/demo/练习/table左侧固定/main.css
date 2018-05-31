@@ -1,0 +1,29 @@
+.wrapper {width: 90%;margin: 100px auto;overflow: auto;}
+
+.wrapper thead tr th {background: #DDEFFA;}
+
+table th {white-space: nowrap;}
+
+table td {white-space: nowrap;}
+
+body,table {font-size: 12px;}
+
+table {empty-cells: show;border-collapse: collapse;margin: 0 auto;}
+
+h1,h2,h3 {font-size: 12px;margin: 0;padding: 0;}
+
+.tab-css {border: 1px solid #cad9ea;color: #666;}
+
+.tab-css th {height: 30px;}
+
+.tab-css tr {position: relative;}
+
+.tab-css td,.tab-css th {border: 1px solid #cad9ea;padding: 0 1em 0;}
+
+.tab-css tr.tr-css {background-color: #f5fafe;height: 30px;}
+
+.tab-css tr:nth-child(odd) td {background-color: #ECE9D8;}
+
+.fixed {position: fixed;background: #069DD5!important;color: #fff;width: 37px;height: 30px;line-height: 30px;}
+
+.td-empty {width: 60px;height: 30px;padding: 0!important;display: inline-block;}

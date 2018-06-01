@@ -4,3 +4,13 @@
 
 3、使用脚手架创建一个项目（test）
     > vue init webpack test
+
+    > 引入element-Ui 
+    ``` 
+        安装后（在 main.js 中写入以下内容：）在 main.js 中写入以下内容：
+        import ElementUI from 'element-ui';
+        import 'element-ui/lib/theme-chalk/index.css';
+
+        Vue.use(ElementUI);
+        
+    ```

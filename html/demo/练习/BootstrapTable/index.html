@@ -9,7 +9,21 @@
     <script src="bootstrap.js"></script>
 
     <style>
-        .center {width: 960px;margin-left: auto;margin-right: auto; }
+        .center {width: 98%;margin-left: auto;margin-right: auto; }
+
+        thead tr {background: #d0eef9;}
+        thead tr th ,tbody tr td{text-align: center}
+
+        .order em {
+            display: inline-block;width: 18px;height: 18px;margin: 0 0px 0 5px;
+            background: url(./images/cjwl_order.png) left -600px no-repeat;
+            vertical-align: -6px;
+        }
+        /* 默认不排序 low:降序 high:升序 */
+        .order em.noorder {background-position: left -4px;}
+        .order em.low {background-position: left -48px;}
+        .order em.high {background-position: left -25px;}
+
     </style>
 
 </head>
@@ -17,7 +31,7 @@
 <div class="center">
     <table class="table table-striped table-bordered table-hover">
         <thead>
-            <tr><th>编号</th><th>姓名</th><th class="ObjSort">年龄</th></tr>
+            <tr><th>编号</th><th>姓名</th><th class="ObjSort order">年龄</th></tr>
         </thead>
         <tbody>
             <tr><td>001</td><td>郭靖</td><td>25</td></tr>
@@ -36,10 +50,10 @@
 <script>
     $(function () {
         var v1 = $(".ObjSort");
-        var v2 = $(".ObjSort").append("<span id='sort'>↓</span>");
+        var v2 = $(".ObjSort").append("<em class='noorder'></em>"); //
 
         // 排序测试
-        $('#sort').click(function () {
+        $('.order em').click(function () {
             Sort($(this))
         })
     });
@@ -49,12 +63,13 @@
         var SortCellIndex = $(obj).parents("th").index();
         var SortTable = $(obj).parents("table");
         var SortTableRowsLength = SortTable[0].rows.length;
-
-        if ($(obj).html() == "↑") {
-            var SortFlag = "↓";
+        if($(obj).hasClass('high')){ // 升序
+            $(obj).removeClass('high')
+            $(obj).addClass('low')
             var SortMode = 1;
-        } else {
-            var SortFlag = "↑";
+        } else { // 降序
+            $(obj).removeClass('low')
+            $(obj).addClass('high')
             var SortMode = -1;
         }
         for (var i = 1; i < SortTableRowsLength - 1 ; i++) {
@@ -66,6 +81,5 @@
             }
             $(tmpTr).insertBefore(SortTable[0].rows[i]);
         }
-        $(obj).html(SortFlag);
     }
 </script>

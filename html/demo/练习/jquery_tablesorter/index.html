@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tablesorter静态排序</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/jquery.tablesorter.js"></script>
+
+    <style>
+        html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+            margin: 0;padding: 0;  }
+        body {font-family: "Microsoft Yahei", "Arial";color: #333;background-color: #fff;font-size: 15px;overflow-x: hidden;}
+        a {color: #06f;text-decoration: none;}
+        a:hover {color: #f60;text-decoration: none;}
+        img {border: none;vertical-align: middle;max-width: 100%;}
+        i, em {font-style: normal;}
+        li {list-style-type: none;}
+        textarea {resize: vertical;}
+        input, select, textarea {font-family: "Microsoft Yahei", "Arial";background-color: #fff;margin: 0;padding: 0;outline: none;}
+
+        .g-fl {float: left;}
+        .g-fr {float: right;}
+        .g-c {zoom: 1;}
+        .g-c:after {clear: both;content: ".";display: block;height: 0;visibility: hidden;}
+        .g-w {max-width: 1200px;min-width: 980px;width: 96%;margin-left: auto;margin-right: auto;}
+        .g-hide {display: none !important;}
+
+        .container {
+            width: 100%;
+            margin: 20px 0
+        }
+
+        /*左右居中使用text-align即可。margin也同样可以实现*/
+        .container .title {
+            margin: 0 auto;
+            width: 80%;
+            text-align: center
+        }
+
+        .container .content {margin: 15px }
+
+        .ts table {empty-cells: show;border-collapse: collapse;margin: 0 auto;border-top: 1px solid #d8d8d8;border-left: 1px solid #d8d8d8;}
+        .ts th {background-color: #cfeef9;font-size: 15px;}
+        .ts td, .ts th {border-bottom: 1px solid #d8d8d8;border-right: 1px solid #d8d8d8;text-align: center;padding: 6px}
+
+        .order em {
+            display: inline-block;width: 18px;height: 18px;margin: 0 0 0 5px;
+            background: url(./images/cjwl_order.png) left -4px no-repeat;
+            vertical-align: -6px;
+        }
+        /*low:降序 high:升序 */
+        .order em.low {background-position: left -48px;}
+        .order em.high {background-position: left -25px;}
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="title">Jquery排序分页插件tablesorter简介</div>
+
+    <div class="content ts">
+        <table id="sortTable" class="tablesorter">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th><div class="order">成绩<em></em></div></th>
+                    <th>手机</th>
+                    <th>职业</th>
+                    <th>城市</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>张三</td>
+                    <td>男</td>
+                    <td>23</td>
+                    <td>13155186650</td>
+                    <td>C++</td>
+                    <td>合肥</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>男</td>
+                    <td>26</td>
+                    <td>13155186650</td>
+                    <td>Python</td>
+                    <td>杭州</td>
+                </tr>
+                <tr>
+                    <td>赵五</td>
+                    <td>男</td>
+                    <td>25</td>
+                    <td>13155186650</td>
+                    <td>Java</td>
+                    <td>深圳</td>
+                </tr>
+                <tr>
+                    <td>上官飞二</td>
+                    <td>女</td>
+                    <td>22</td>
+                    <td>13155186650</td>
+                    <td>PHP</td>
+                    <td>北京</td>
+                </tr>
+                <tr>
+                    <td>薛宝儿</td>
+                    <td>女</td>
+                    <td>24</td>
+                    <td>13155186650</td>
+                    <td>前端</td>
+                    <td>合肥</td>
+                </tr>
+                <tr>
+                    <td>王二</td>
+                    <td>男</td>
+                    <td>27</td>
+                    <td>13155186650</td>
+                    <td>经理</td>
+                    <td>合肥</td>
+                </tr>
+                <tr>
+                    <td>张正</td>
+                    <td>男</td>
+                    <td>23</td>
+                    <td>13155186650</td>
+                    <td>C</td>
+                    <td>成都</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    //表示文档结构已经加载完成（不包含图片等非文字媒体文件) ===> $(function(){...});
+    $(document).ready(function () {
+        // $("#sortTable").tablesorter();
+    });
+
+    //onload，指示页面包含图片等文件在内的所有元素都加载完成
+
+</script>

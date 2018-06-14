@@ -61,9 +61,7 @@ export default {
     font-size: 16px;
 }
 
-ul li {
-    list-style-type: none;height: 28px;line-height: 28px;padding: 6px 0;
-}
+ul li {list-style-type: none;height: 28px;line-height: 28px;padding: 6px 0;}
 ul li .selectmain {display: inline-block;height: 26px;line-height: 26px;color: #fff;font-size: 12px}
 ul li .selectmain.selectbg_red {background-color: #f895a0}
 ul li .selectmain.selectbg_green {background-color:#0CB65C}

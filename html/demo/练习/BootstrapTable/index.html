@@ -34,13 +34,13 @@
             <tr><th>编号</th><th>姓名</th><th class="ObjSort order">年龄</th></tr>
         </thead>
         <tbody>
-            <tr><td>001</td><td>郭靖</td><td>25</td></tr>
-            <tr><td>002</td><td>黄蓉</td><td>23</td></tr>
+            <tr><td>001</td><td>郭靖</td><td>5</td></tr>
+            <tr><td>002</td><td>黄蓉</td><td>123</td></tr>
             <tr><td>003</td><td>杨过</td><td>24</td></tr>
             <tr><td>004</td><td>郭襄</td><td>22</td></tr>
             <tr><td>005</td><td>小龙女</td><td>23</td></tr>
             <tr><td>006</td><td>黄药师</td><td>24</td></tr>
-            <tr class="sr-only"><td>007</td><td>杨过</td><td>26</td></tr>
+            <!-- <tr class="sr-only"><td>007</td><td>杨过</td><td>26</td></tr> -->
         </tbody>
     </table>
 </div>
@@ -50,7 +50,7 @@
 <script>
     $(function () {
         var v1 = $(".ObjSort");
-        var v2 = $(".ObjSort").append("<em class='noorder'></em>"); //
+        var v2 = $(".ObjSort").append("<em class='noorder'></em>"); 
 
         // 排序测试
         $('.order em').click(function () {
@@ -58,28 +58,33 @@
         })
     });
 
-    function Sort(obj) {
+    function Sort(obj, type) {
         var tmpTr;
-        var SortCellIndex = $(obj).parents("th").index();
-        var SortTable = $(obj).parents("table");
+        var SortCellIndex = $(obj).parents("th").index(); // 获 需要排序的索引值
+        var SortTable = $(obj).parents("table"); // 获取表格内容
         var SortTableRowsLength = SortTable[0].rows.length;
         if($(obj).hasClass('high')){ // 升序
             $(obj).removeClass('high')
             $(obj).addClass('low')
-            var SortMode = 1;
+            var SortMode = 0;
         } else { // 降序
             $(obj).removeClass('low')
             $(obj).addClass('high')
-            var SortMode = -1;
+            var SortMode = 1;
         }
         for (var i = 1; i < SortTableRowsLength - 1 ; i++) {
             tmpTr = SortTable[0].rows[i];
             for (var j = i + 1; j < SortTableRowsLength; j++) {
-                if (tmpTr.cells[SortCellIndex].innerHTML.localeCompare(SortTable[0].rows[j].cells[SortCellIndex].innerHTML) == SortMode) {
+                if (parseInt(tmpTr.cells[SortCellIndex].innerHTML) > parseInt((SortTable[0].rows[j].cells[SortCellIndex].innerHTML)) == SortMode) {
                     tmpTr = SortTable[0].rows[j];
                 }
+                // if (tmpTr.cells[SortCellIndex].innerHTML.localeCompare(SortTable[0].rows[j].cells[SortCellIndex].innerHTML) == SortMode) {
+                    // tmpTr = SortTable[0].rows[j];
+                // }
             }
+            // 在元素之前插入某个元素
             $(tmpTr).insertBefore(SortTable[0].rows[i]);
         }
     }
+
 </script>

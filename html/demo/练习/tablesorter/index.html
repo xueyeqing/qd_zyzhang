@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="../BootstrapTable/jquery-3.2.1.js"></script>
+    <script src="./js/jquery.tablesorter.js"></script>
+
+    <style>
+        table {border: 1px solid #ddd;border-spacing: 0; border-collapse: collapse;}
+        thead tr {background: #d0eef9;}
+        thead tr th ,tbody tr td{text-align: center;border: 1px solid #ddd;padding: 8px;}
+
+        .order em {
+            display: inline-block;width: 18px;height: 18px;margin: 0 0px 0 5px;
+            background: url(./images/cjwl_order.png) left -600px no-repeat;vertical-align: -6px;
+        }
+        /* 默认不排序 low:降序 high:升序 */
+        .order em.noorder {background-position: left -4px;}
+        .order em.low {background-position: left -48px;}
+        .order em.high {background-position: left -25px;}
+
+    </style>
+
+</head>
+<body>
+    <table id="sortTable" class="tablesorter">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>sex</th>
+                <th>Email</th>
+                <th>age</th>
+                <th>Web Site</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>男</td>
+                <td>jsmith@gmail.com</td>
+                <td>28</td>
+                <td>http://www.zhangsan.com</td>
+            </tr>
+            <tr>
+                <td>耿耿</td>
+                <td>女</td>
+                <td>fbach@yahoo.com</td>
+                <td>20</td>
+                <td>http://www.gg.com</td>
+            </tr>
+            <tr>
+                <td>周星星</td>
+                <td>男</td>
+                <td>jdoe@hotmail.com</td>
+                <td>30</td>
+                <td>http://www.zxx.com</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sortTable").tablesorter({
+            sortList: [[0, 0], [3, 0]] 
+        });
+        
+    });
+</script>

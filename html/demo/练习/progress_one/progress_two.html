@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {font-size: 12px;}
+    
+        .ProgressBar {
+            position: relative;
+            width: 200px;
+            /* 宽度 */
+            border: 1px solid #B1D632;
+            padding: 1px;
+            border-radius: 15px;
+        }
+    
+        .ProgressBar div {
+            display: block;
+            position: relative;
+            background: #B1D632;
+            color: #333333;
+            height: 20px;
+            /* 高度 */
+            line-height: 20px;
+            /* 必须和高度一致，文本才能垂直居中 */
+            border-radius: 15px;
+        }
+    
+        .ProgressBar div span {
+            position: absolute;
+            width: 200px;
+            /* 宽度 */
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="ProgressBar">
+        <div style="width: 50%;">
+            <span>50%</span>
+        </div>
+    </div>
+    <br>
+    
+    <div class="ProgressBar">
+        <div style="width: 80%;">
+            <span>80%</span>
+        </div>
+    </div>
+    <br>
+
+    <div class="ProgressBar">
+        <div style="width: 0%;">
+            <span>0%</span>
+        </div>
+    </div>
+    <br>
+
+    <div class="ProgressBar">
+        <div style="width: 100%;">
+            <span>100%</span>
+        </div>
+    </div>
+    <br>
+    
+    <div class="ProgressBar">
+        <div style="width: 10%;">
+            <span>10%</span>
+        </div>
+    </div>
+</body>
+</html>
